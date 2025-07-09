@@ -132,18 +132,20 @@ const Auth = ({ onLogin }) => {
   const Branding = (
     <Box sx={{
       flex: 1.2,
-      minWidth: 350,
-      maxWidth: 500,
-      height: 560,
+      minWidth: { xs: '100%', sm: 350 },
+      maxWidth: { xs: '100%', sm: 500 },
+      height: { xs: 'auto', sm: 560 },
       bgcolor: '#191919',
-      borderRadius: '32px 0 0 32px',
+      borderRadius: { xs: '32px 32px 0 0', sm: '32px 0 0 32px' },
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      px: 6,
-      boxShadow: '0 0 64px 0 #FFD60033',
+      px: { xs: 3, sm: 6 },
+      py: { xs: 4, sm: 0 },
+      boxShadow: { xs: '0 0 32px 0 #FFD60033', sm: '0 0 64px 0 #FFD60033' },
       position: 'relative',
+      width: { xs: '100%', sm: 'auto' },
     }}>
       <Box sx={{ mb: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <Box sx={{ width: 110, height: 110, bgcolor: '#111', borderRadius: '50%', boxShadow: '0 0 60px 10px #FFD600', display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 3 }}>
@@ -166,18 +168,19 @@ const Auth = ({ onLogin }) => {
   const AuthCard = (
     <Box sx={{
       flex: 1,
-      minWidth: 370,
-      maxWidth: 440,
-      height: 560,
+      minWidth: { xs: '100%', sm: 370 },
+      maxWidth: { xs: '100%', sm: 440 },
+      height: { xs: 'auto', sm: 560 },
       bgcolor: '#181818',
-      borderRadius: '0 32px 32px 0',
-      boxShadow: '0 0 40px 10px #FFD600',
+      borderRadius: { xs: '0 0 32px 32px', sm: '0 32px 32px 0' },
+      boxShadow: { xs: '0 0 24px 6px #FFD600', sm: '0 0 40px 10px #FFD600' },
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       justifyContent: 'center',
-      px: 6,
-      py: 4,
+      px: { xs: 3, sm: 6 },
+      py: { xs: 4, sm: 4 },
+      width: { xs: '100%', sm: 'auto' },
     }}>
      
       <Tabs
@@ -296,7 +299,20 @@ const Auth = ({ onLogin }) => {
 
   return (
     <Box sx={{ minHeight: '100vh', width: '100vw', bgcolor: 'radial-gradient(circle at 60% 60%, #232323 60%, #181818 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'auto' }}>
-      <Box sx={{ display: 'flex', flexDirection: 'row', borderRadius: 8, boxShadow: '0 0 80px 0 #FFD60055', overflow: 'hidden', bgcolor: 'transparent', mt: 2, mb: 2 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          borderRadius: 8,
+          boxShadow: '0 0 80px 0 #FFD60055',
+          overflow: 'hidden',
+          bgcolor: 'transparent',
+          mt: { xs: 0, sm: 2 },
+          mb: { xs: 0, sm: 2 },
+          width: { xs: '100%', sm: 'auto' },
+          maxWidth: { xs: '100%', sm: 950 },
+        }}
+      >
         {Branding}
         {AuthCard}
       </Box>
