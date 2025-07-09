@@ -8,7 +8,7 @@ const { errorHandler } = require('./middlewares/errorMiddleware');
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'http://localhost:5173', // frontend dev server
+  origin: 'https://candidate-referral-portal-three.vercel.app', // frontend dev server
   credentials: true
 }));
 
