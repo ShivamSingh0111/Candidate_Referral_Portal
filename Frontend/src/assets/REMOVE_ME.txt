@@ -1,0 +1,1 @@
+react.svg is not needed for your project. You can safely delete this file.

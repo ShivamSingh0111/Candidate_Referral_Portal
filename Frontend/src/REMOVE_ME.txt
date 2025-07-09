@@ -1,0 +1,1 @@
+App.css and any default Vite/React assets are not needed for this project. You can safely delete App.css and any unused logo files from the src/assets folder if present.
