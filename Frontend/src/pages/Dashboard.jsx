@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './Layout';
 import DashboardHeader from '../components/DashboardHeader';
-import StatCards from '../components/StatCards';
-import RecentActivity from '../components/RecentActivity';
+
 import ReferralForm from '../components/ReferralForm';
 import CandidateList from '../components/CandidateList';
 import { Grid } from '@mui/material';
@@ -34,10 +33,10 @@ const Dashboard = ({ onLogout }) => {
   return (
     <Layout onLogout={onLogout}>
       <DashboardHeader />
-      <StatCards />
+     
       <Grid container spacing={3}>
         <Grid item xs={12} md={8}>
-          <RecentActivity />
+        
           <ReferralForm setCandidates={setCandidates} />
           <CandidateList candidates={candidates} setCandidates={setCandidates} loading={loading} error={error} />
         </Grid>
