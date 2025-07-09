@@ -40,9 +40,7 @@ const Dashboard = ({ onLogout }) => {
           <ReferralForm setCandidates={setCandidates} />
           <CandidateList candidates={candidates} setCandidates={setCandidates} loading={loading} error={error} />
         </Grid>
-        <Grid item xs={12} md={4}>
-          {/* Yahan aap charts, stats by location, ya extra cards add kar sakte hain */}
-        </Grid>
+       
       </Grid>
     </Layout>
   );

@@ -11,9 +11,11 @@ const DashboardHeader = () => (
       <Typography variant="h3" fontWeight={700}>Dashboard</Typography>
       <Button variant="contained" color="success">New Report</Button>
     </Box>
-    <Alert severity="warning" sx={{ mt: 2 }}>
-      <b>API gateways are now Offline.</b> Please try the API later. If you want to stay up to date follow our <a href="#" style={{ color: '#1976d2' }}>Status Page</a>
+    <Alert severity="info" sx={{ mt: 2 }}>
+      Welcome to the Candidate Referral Portal! Here you can manage your referrals and track their progress.  
+      If you have any questions, feel free to reach out to support.
     </Alert>
+    
   </Box>
 );
 
